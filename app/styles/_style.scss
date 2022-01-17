@@ -186,7 +186,7 @@ a {
       padding: 14px 40px;
       font-size: 14px;
       font-weight: 500;
-      background-color: #f7e05f;
+      background-color: var(--pri-color);
       color: #0d0e0e !important;
     }
   }
@@ -316,7 +316,7 @@ a {
 
     &:hover {
       &:after {
-        background-color: var(--android-green);
+        background-color: var(--pri-color);
       }
     }
   }
@@ -432,7 +432,7 @@ a {
           padding: 18px 42px;
           font-size: 14px;
           font-weight: 500;
-          background-color: rgb(247, 224, 95);
+          background-color: var(--pri-color);
           color: var(--black);
         }
       }
