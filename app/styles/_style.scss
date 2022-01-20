@@ -498,12 +498,11 @@ a {
 .flex-container{
   display: flex;
   flex-direction: row;
-
   .flex-left {
   width: 30%;
-  padding: 5px;
-  margin-top: 6em;
-  margin-bottom: 6em;
+  
+  margin-top: 96px;
+  margin-bottom: 96px;
     h1{
     color: #fff;
       @media(max-width: 768px) {
@@ -512,25 +511,22 @@ a {
     }
     @media(max-width: 768px) {
       width: 100%;
-      padding: 5px;
-      margin-top: 6em;
-      margin-bottom: 0em;
+      margin-top: 96px;
+      margin-bottom: 0px;
     }
   }
 
   .flex-right {
   width: 70%;
-  padding: 5px;
-  margin-top: 6em;
-  margin-bottom: 6em;
+  margin-top: 96px;
+  margin-bottom: 96px;
     p{
     color: #fff;
     }
     @media(max-width: 768px) {
       width: 100%;
-      padding: 5px;
-      margin-top: 0em;
-      margin-bottom: 6em;
+      margin-top: 0px;
+      margin-bottom: 96px;
     }
   }
   @media(max-width: 768px) {
@@ -538,7 +534,6 @@ a {
     height: auto;
     min-height: 414px;
     flex-direction: column;
-    margin-top: -190px;
     }
 }
 
@@ -578,10 +573,10 @@ a {
       }
     }
     @media(max-width: 768px) {
-        position: inherit;
-        top: 0;
-        max-width: 80%;
-      }
+      position: inherit;
+      top: 0;
+      max-width: 80%;
+    }
 }
 
 .essentials-section-a{
@@ -590,7 +585,7 @@ a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 0.29em 2em 5.21em;
+    padding: 4.64px 32px 83.36px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -610,11 +605,11 @@ a {
     .essentials-container-bg{
     position: absolute;
     left: 0;
-    top: -16em;
+    top: -256px;
     right: 0;
     bottom: 0;
     overflow: hidden;
-    height: 27em;
+    height: 432px;
     background-image: linear-gradient(269deg,#1a27c9,#000daf);
     -webkit-transform: skew(0deg,-15deg);
     -ms-transform: skew(0deg,-15deg);
@@ -626,12 +621,34 @@ a {
     }
     .essentials-layer{
       z-index: 1;
+      padding:0;
     }
 }
 .essentials-section-a.essentials-section-b{
   background-image: linear-gradient(
 269deg
 ,#1a27c9,#000daf); overflow: visible;
+}
+
+.hero-containerflex{
+  position: relative;
+  flex-direction: column-reverse;
+}
+
+.container-fluidbg{
+  background-image: linear-gradient(44deg,#1a27c9,#000daf); 
+  height: 688px;
+
+  @media(max-width: 767px){
+    height: 576px;
+  }
+  @media(max-width: 425px){
+    height: 432px;
+  }
+}
+
+.content-textcarrer{
+  max-width: 400px;
 }
 
 
