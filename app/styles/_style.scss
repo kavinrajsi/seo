@@ -95,35 +95,36 @@ button {
 }
 
 a {
-  color: setcolor(green);
   font-family: var(--secondary-font);
   cursor: pointer;
   border-radius: 4px;
 
-  &:not(.button) {
-    position: relative;
-    padding-bottom: 5px;
+  // &:not(.button) {
+  //   position: relative;
+  //   padding-bottom: 5px;
 
-    &:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: setcolor(green);
-    }
+  //   &:after {
+  //     content: "";
+  //     content: none;
+  //     display: block;
+  //     width: 100%;
+  //     height: 1px;
+  //     position: absolute;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //   }
 
-    &:hover {
-      &:after {
-        opacity: 1;
-        animation: 0.35s ease-out 0s scale-out forwards, 0.35s ease-out 0.35s scale-in forwards;
-      }
-    }
-  }
+  //   &:hover {
+  //     &:after {
+  //       opacity: 1;
+  //       animation: 0.35s ease-out 0s scale-out forwards, 0.35s ease-out 0.35s scale-in forwards;
+  //     }
+  //   }
+  // }
 }
+
+@import 'navigation';
 
 .hero-container {
   @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
@@ -474,7 +475,7 @@ a {
       padding-top: 15px;
 
       @media(min-width: 576px) {
-        padding-top: 0px;
+        padding-top: 0;
       }
 
       li {
@@ -649,6 +650,8 @@ a {
 .content-textcarrer{
   max-width: 400px;
 }
+
+
 
 .footer__cookie {
   // display: none !important;
