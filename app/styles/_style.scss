@@ -1275,32 +1275,44 @@ a {
 
 .about-us-content {
   background-color: #fff;
-@include interpolate('padding-top', 375px, 30px, 1024px, 60px, 'ease-in');
-@include interpolate('padding-bottom', 375px, 30px, 1024px, 60px, 'ease-in');
+  @include interpolate('padding-top', 375px, 30px, 1024px, 60px, 'ease-in');
+  @include interpolate('padding-bottom', 375px, 30px, 1024px, 60px, 'ease-in');
 
 
   margin: 0 auto;
 
   img {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     display: block;
     margin-bottom: 30px;
+
     @media(min-width: 768px) {
       width: 64%;
     }
   }
-h1,
-h2,
-h3 {margin-top: 40px;
-  p, h1,h2,h3 {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
 
-    @media(min-width: 768px) {
-      width: 50%;
+  h1,
+  h2,
+  h3 {
+    margin-top: 40px;
+
+    p,
+    h1,
+    h2,
+    h3 {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media(min-width: 768px) {
+        width: 50%;
+      }
     }
   }
-}
+  }
+  .container-fluid  .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
