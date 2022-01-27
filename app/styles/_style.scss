@@ -209,12 +209,14 @@ a {
   }
 
   .content-image {
-    padding: 0 15px;
-    height: 614px;
+    text-align: center;
+    padding: 30px 15px 60px;
+    height: auto;
     margin-bottom: -24px;
-    @include interpolate('padding-left', 375px, 60px, 1024px, 140px, 'ease-in');
 
     @media(min-width: 768px) {
+      padding-top: 0;
+      @include interpolate('padding-left', 375px, 60px, 1024px, 140px, 'ease-in');
       width: 400px;
       height: auto;
       min-height: 444px;
