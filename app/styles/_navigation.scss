@@ -375,14 +375,14 @@ $mobile-menu: 899px;
             @media (min-width: 900px) {
               display: initial;
             }
-            background: var(--pri-color);
             border-radius: 4px;
             padding: 13px 24px;
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 19px;
-            color: rgba(255, 255, 255, 0.95);
+            background: var(--pri-color);
+            color: #0d0e0e;
             // @media (max-width: $mobile-menu) {
             // 	background: transparent;
             // 	font-size: 22px;
