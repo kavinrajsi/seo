@@ -921,6 +921,7 @@ a {
 
       img {
         width: 40px;
+        width: 60px;
       }
     }
 
@@ -1270,7 +1271,7 @@ a {
     width: 75%;
 
     @media(min-width: 768px) {
-      width: 50%;
+      // width: 50%;
     }
   }
 }
