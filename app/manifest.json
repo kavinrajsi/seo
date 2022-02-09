@@ -1,9 +1,0 @@
-{
-  "name": "theSeoarch",
-  "short_name": "theSeoarch",
-  "theme_color": "#ffcb05",
-  "background_color": "#000000",
-  "display": "standalone",
-  "scope": "/",
-  "start_url": "/"
-}
