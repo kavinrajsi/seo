@@ -1359,3 +1359,19 @@ a {
 .about-us-content .col-list-about:nth-child(5) h2 {
   padding-right: 50px;
 }
+
+.service-list h2{
+font-size: 26px;
+margin-top: 0;
+}
+.service-lists {
+    display: grid;
+    gap: 30px 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.service-lists h2{
+  padding-right: 20px;
+}
