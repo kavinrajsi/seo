@@ -1314,8 +1314,48 @@ a {
       }
     }
   }
-  }
-  .container-fluid  .container{
-    padding-left: 0;
-    padding-right: 0;
-  }
+}
+
+.container-fluid .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.about-us-content {
+  display: grid;
+  gap: 30px 80px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 70%;
+}
+
+.about-us-content.hoverDie{
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 40%;
+}
+.about-us-content.hoverDie p{
+  display: none;
+  height: 0;
+  transition: all 0.25s ease;
+}
+.about-us-content.hoverDie .col-list-about:nth-child(8):hover  > p,
+.about-us-content.hoverDie .col-list-about:nth-child(7):hover  > p,
+.about-us-content.hoverDie .col-list-about:nth-child(6):hover  > p,
+.about-us-content.hoverDie .col-list-about:nth-child(5):hover  > p,
+.about-us-content.hoverDie .col-list-about:nth-child(4):hover  > p,
+.about-us-content.hoverDie .col-list-about:nth-child(3):hover  > p,
+.about-us-content.hoverDie .col-list-about:nth-child(2):hover  > p,
+.about-us-content.hoverDie .col-list-about:nth-child(1):hover > p {
+  display: block;
+  height: auto;
+  transition: all 0.25s ease;
+}
+
+.about-us-content h2 {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.about-us-content .col-list-about:nth-child(5) h2 {
+  padding-right: 50px;
+}
