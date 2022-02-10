@@ -1375,3 +1375,13 @@ margin-top: 0;
 .service-lists h2{
   padding-right: 20px;
 }
+.service-lists.ppclist{
+  max-width: 100%;
+}
+.service-lists.ppclist {
+  gap: 60px 80px;
+}
+
+.service-lists.ppclist .service-list h2{
+  padding-right: 70px;
+}
