@@ -1409,6 +1409,10 @@ a {
   width: 24px;
   height: 24px;
   max-width: 24px;
+  flex: 0 0 24px;
+  border-radius: 2px;
+  margin-right: 8px;
+  background-color: red;
 }
 .option-list li {
   display: flex;
