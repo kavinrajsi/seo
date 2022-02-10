@@ -816,6 +816,7 @@ a {
 
 .hero-container {
   @include interpolate('padding-top', 375px, 60px, 1024px, 80px, 'ease-in');
+  @include interpolate('padding-bottom', 375px, 60px, 1024px, 80px, 'ease-in');
   margin: 0 -15px;
   display: flex;
   flex-direction: column;
