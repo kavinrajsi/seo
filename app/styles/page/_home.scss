@@ -1,0 +1,179 @@
+.home-hero {
+  background: var(--black);
+  color: var(--white);
+
+  h1,
+  p {
+    color: var(--white);
+  }
+
+  .content-text {
+    padding-right: 110px;
+  }
+
+  .home-hero-container {
+    @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
+    @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    @media(min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+
+      >div {
+        flex: 0 0 50%;
+      }
+    }
+
+    .content-image {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.home-plan {
+  background-image: linear-gradient(180deg, #efefef, #fff);
+  @include interpolate('padding-top', 375px, 40px, 1024px, 160px, 'ease-in');
+  @include interpolate('padding-bottom', 375px, 40px, 1024px, 120px, 'ease-in');
+  &-lists {
+    display: grid;
+    width: 100%;
+    min-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 120px 30px;
+
+    @media(min-width: 1200px) {
+      gap: 30px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .plan-list {
+      .cards {
+        border-radius: 6px;
+        background: #fff;
+        padding: 60px 40px 40px;
+        @include interpolate('padding-left', 375px, 20px, 1024px, 40px, 'ease-in');
+        @include interpolate('padding-right', 375px, 20px, 1024px, 40px, 'ease-in');
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+
+        &-icon {
+          background: #fff;
+          width: 90px;
+          height: 90px;
+          border-radius: 128px;
+          box-shadow: 7px 7px 30px 0 rgba(0, 0, 0, 0.2);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: -40px;
+
+          svg {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+          }
+        }
+
+        &-content {
+          h2 {
+            font-size: 28px;
+            font-size: 26px;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 20px;
+          }
+
+        }
+
+        a {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.home-service {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    @include interpolate('padding-bottom', 375px, 40px, 1024px, 120px, 'ease-in');
+  }
+
+  .service-text {
+    max-width: 40%;
+    flex: 0 0 40%;
+    padding-right: 46px;
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  .service-lists {
+    max-width: 60%;
+    flex: 0 0 60%;
+
+    ul {
+      max-width: 90%;
+      margin-left: auto;
+      counter-reset: orderedlist;
+
+      li {
+
+        a {
+          display: block;
+          font-size: 32px;
+          line-height: 150%;
+          border-top: 1px solid var(--black);
+          padding-top: 30px;
+          padding-bottom: 80px;
+          position: relative;
+
+          &:before {
+            padding-right: 0px;
+            line-height: normal;
+            vertical-align: text-top;
+            counter-increment: orderedlist;
+            content: "0"counter(orderedlist) "/";
+            display: inline-block;
+            font-size: 16px;
+          }
+
+          &:hover {
+            &:after {
+              transform: rotate(50deg);
+            }
+          }
+
+          &:after {
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            border-radius: 50%;
+            background-color: var(--pri-color);
+            background: var(--pri-color) url('../images/north_east_white_24dp.svg') no-repeat center;
+            width: 42px;
+            height: 42px;
+            content: "";
+            display: inline-block;
+          }
+        }
+
+      }
+    }
+  }
+}

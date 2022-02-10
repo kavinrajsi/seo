@@ -1,0 +1,11 @@
+.button,
+button {
+  margin: 0;
+  border-radius: 6px;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black);
+  background-color: var(--pri-color);
+  transition: all 0.26 ease;
+}
