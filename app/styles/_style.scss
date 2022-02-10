@@ -1419,12 +1419,9 @@ a {
   position: relative;
   color: #fff;
   font-size: 20px;
+  line-height: 26px;
 }
 
 .option-list li:nth-child(7){
-  padding-right: 70%;
-}
-.option-list li:nth-child(8),
-.option-list li:nth-child(9){
-  padding-right: 50px;
+  // padding-right: 70%;
 }
