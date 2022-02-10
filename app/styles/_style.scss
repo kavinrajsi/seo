@@ -1422,6 +1422,18 @@ a {
   line-height: 26px;
 }
 
-.option-list li:nth-child(7){
-  // padding-right: 70%;
+.asdasd {
+  @include interpolate('padding-top', 375px, 30px, 1024px, 60px, 'ease-in');
+  @include interpolate('padding-bottom', 375px, 30px, 1024px, 110px, 'ease-in');
+  @include interpolate('padding-left', 375px, 30px, 1024px, 120px, 'ease-in');
+  @include interpolate('padding-right', 375px, 30px, 1024px, 120px, 'ease-in');
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.container-fluid:after,
+.container-fluid:before {
+  content: "";
+  clear: both;
 }
