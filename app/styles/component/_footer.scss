@@ -39,15 +39,36 @@
 
 .footer-rights {
   padding: 20px 0;
-  ul{
-  display: flex;
-  justify-content: space-between;
-  li{
-    ul{
-      li:first-child{
-        padding-right: 16px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      ul {
+        li:first-child {
+          padding-right: 16px;
+        }
       }
     }
   }
 }
+
+.whatsapp-icon-right a {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 100%;
+  margin: 0 auto;
+  bottom: 70px;
+  right: 20px;
+  z-index: 999;
+  // background: #fff;
+  // box-shadow: rgba(0, 0, 0, 10%) 0px 1px 6px, rgba(0, 0, 0, 20%) 0px 2px 24px;
+  transition: box-shadow 150ms ease-in-out 0s;
 }
