@@ -54,6 +54,34 @@
   }
 }
 
+.footer__cookie{
+  background-color: var(--pure-white);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  padding: 12px 0;
+  .wrapper{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    p{
+      margin-bottom: 0;
+      padding: 0 8px;
+
+      a{
+        padding-left: 4px;
+      }
+    }
+    .btn-agree{
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
+}
+
 .whatsapp-icon-right a {
   position: fixed;
   display: flex;
