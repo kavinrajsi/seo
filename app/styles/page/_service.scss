@@ -56,13 +56,16 @@
     .service-point-list {
       padding-bottom: 20px;
       margin-bottom: 20px;
-      border-bottom: 1px solid rgba(13,14,14,0.2);
-      &:last-child{
+      border-bottom: 1px solid rgba(13, 14, 14, 0.2);
+
+      &:last-child {
         border-bottom: 0;
       }
+
       .service-icon {
         margin-bottom: 16px;
-        img{
+
+        img {
           border-radius: 4px;
         }
       }
@@ -80,4 +83,37 @@
       }
     }
   }
+}
+
+.service-whatwe-list {
+  @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
+
+  .service-lists {
+    display: flex;
+    flex-wrap: wrap;
+
+    .service-list {
+      &:not(:first-child){
+        background: #efefef;
+      }
+      border-radius: 4px;
+      flex: 0 0 22%;
+      max-width: 22%;
+      padding: 16px;
+      margin: 15px;
+      margin-bottom: 15px;
+    }
+
+    .service-icon {}
+
+    .service-title {
+      padding-top: 8px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+.text-left {
+  text-align: left !important;
 }
