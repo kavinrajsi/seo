@@ -8,7 +8,9 @@
   }
 
   .content-text {
-    padding-right: 110px;
+    @media(min-width: $tablet) {
+      padding-right: 110px;
+    }
   }
 
   .home-hero-container {
@@ -18,7 +20,7 @@
     flex-direction: column;
     z-index: 1;
 
-    @media(min-width: 768px) {
+    @media(min-width: $tablet) {
       flex-direction: row;
       align-items: center;
 
@@ -28,7 +30,11 @@
     }
 
     .content-image {
-      // transform: scale(1.2);
+      margin-top: 30px;
+
+      @media(min-width: $tablet) {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -37,6 +43,7 @@
   background-image: linear-gradient(180deg, #efefef, #fff);
   @include interpolate('padding-top', 375px, 40px, 1024px, 160px, 'ease-in');
   @include interpolate('padding-bottom', 375px, 40px, 1024px, 120px, 'ease-in');
+
   &-lists {
     display: grid;
     width: 100%;
@@ -107,15 +114,19 @@
 
 .home-service {
   &-container {
-    display: flex;
-    justify-content: space-between;
-    @include interpolate('padding-bottom', 375px, 40px, 1024px, 120px, 'ease-in');
+    @media(min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      @include interpolate('padding-bottom', 375px, 40px, 1024px, 120px, 'ease-in');
+    }
   }
 
   .service-text {
-    max-width: 40%;
-    flex: 0 0 40%;
-    padding-right: 46px;
+    @media(min-width: $tablet) {
+      max-width: 40%;
+      flex: 0 0 40%;
+      padding-right: 46px;
+    }
 
     p {
       font-size: 16px;
@@ -124,12 +135,17 @@
   }
 
   .service-lists {
-    max-width: 60%;
-    flex: 0 0 60%;
+    @media(min-width: $tablet) {
+      max-width: 60%;
+      flex: 0 0 60%;
+    }
 
     ul {
-      max-width: 90%;
-      margin-left: auto;
+      @media(min-width: $tablet) {
+        max-width: 90%;
+        margin-left: auto;
+      }
+
       counter-reset: orderedlist;
 
       li {

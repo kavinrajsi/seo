@@ -94,7 +94,7 @@
 
     .service-list {
       &:not(:first-child){
-        background: #efefef;
+        // background: #efefef;
       }
       border-radius: 4px;
       flex: 0 0 22%;
@@ -104,7 +104,10 @@
       margin-bottom: 15px;
     }
 
-    .service-icon {}
+    .service-icon {
+      width: 48px;
+      height: 48px;
+    }
 
     .service-title {
       padding-top: 8px;
