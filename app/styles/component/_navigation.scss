@@ -216,7 +216,7 @@ $mobile-menu: 899px;
           &.current-menu-parent,
           &.current-menu-item {
             a {
-              color: var(--pri-color);
+              color: var(--main-color);
             }
           }
 
@@ -408,7 +408,7 @@ $mobile-menu: 899px;
             font-weight: normal;
             font-size: 16px;
             line-height: 19px;
-            background: var(--pri-color);
+            background: var(--main-color);
             color: #0d0e0e;
             // @media (max-width: $mobile-menu) {
             // 	background: transparent;

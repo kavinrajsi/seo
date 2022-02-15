@@ -1,6 +1,6 @@
 .lets-work {
   text-align: center;
-  background-color: var(--pri-color);
+  background-color: var(--main-color);
   @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
   @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
 
