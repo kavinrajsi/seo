@@ -12,8 +12,8 @@
   }
 
   .home-hero-container {
-    @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
-    @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
+    @include interpolate('padding-top', 375px, 60px, 1024px, 140px, 'ease-in');
+    @include interpolate('padding-bottom', 375px, 60px, 1024px, 140px, 'ease-in');
     display: flex;
     flex-direction: column;
     z-index: 1;

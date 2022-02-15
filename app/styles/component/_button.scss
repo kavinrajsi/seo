@@ -1,5 +1,5 @@
 .button,
-button {
+button:not(.menu-toggle) {
   margin: 0;
   border-radius: 6px;
   padding: 14px 24px;
@@ -7,5 +7,5 @@ button {
   font-weight: 500;
   color: var(--black);
   background-color: var(--main-color);
-  transition: all 0.26 ease;
+  transition: all 0.26s ease;
 }

@@ -1,5 +1,18 @@
 console.log('\'Allo \'Allo!');
 	// menu sticky on scroll - Scrolling Effect
+  AOS.init();
+
+  // service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('./sw.js')
+    .then(serviceWorker => {
+      console.log('Service Worker registered: ', serviceWorker);
+    })
+    .catch(error => {
+      console.error('Error registering the Service Worker: ', error);
+    });
+}
 
 	$(window).on("scroll", function () {
 		if ($(window).scrollTop()) {
@@ -14,7 +27,7 @@ console.log('\'Allo \'Allo!');
 	$(".burger").click(function () {
 		var self = $(this);
 		var body = $("body");
-		var siteMenu = $(".menu-main-menu-container");
+		var siteMenu = $(".main-navigation");
 
 		if (!self.hasClass("open")) {
 			self.addClass("open");
@@ -22,12 +35,11 @@ console.log('\'Allo \'Allo!');
 			body.addClass("no-scroll");
 		} else {
 			self.removeClass("open");
-			siteMenu.removeClass("open");
-			siteHeader.removeClass("open");
-			setTimeout(function () {
-				siteMenu.removeClass("show");
-				body.removeClass("no-scroll");
-			}, 200);
+			siteMenu.removeClass("open show");
+      body.removeClass("no-scroll");
+			// setTimeout(function () {
+			// 	siteMenu.removeClass("show");
+			// }, 200);
 		}
 	});
 

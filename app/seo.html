@@ -54,6 +54,7 @@
       content="#ffcb05" />
 
     <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -113,8 +114,8 @@
       class="site-header"
       role="banner">
       <div class="site-branding">
-        <a href="/"
-          class="custom-logo-link"
+        <a class="custom-logo-link"
+          href="/"
           rel="home">
           <svg xmlns="http://www.w3.org/2000/svg"
             width="174"
@@ -125,36 +126,32 @@
             <path fill="#fff"
               d="M12.54 41.14c.196.211.3.492.29.78a1 1 0 01-1.07 1.03H11a6.51 6.51 0 01-3.38-.86 6.12 6.12 0 01-2.32-2.36 7 7 0 01-.82-3.4v-9.7H1.76a.89.89 0 01-.94-.93.89.89 0 01.94-.93h2.69v-5.62a1 1 0 01.63-1.002 1 1 0 01.4-.068c.288-.01.568.094.78.29a1.07 1.07 0 01.29.78v5.62h4.56a.89.89 0 01.93.93.901.901 0 01-.567.872.881.881 0 01-.363.058H6.55v9.7a4.44 4.44 0 001.24 3.26A4.32 4.32 0 0011 40.85h.76c.288-.01.568.094.78.29zm16.4-16.27a7.45 7.45 0 013.1 3 9.51 9.51 0 011.13 4.75v9.28a1.035 1.035 0 11-2.07 0v-9.26a6.53 6.53 0 00-1.85-5 6.77 6.77 0 00-4.81-1.72 7.73 7.73 0 00-3.33.71 5.8 5.8 0 00-2.37 2 4.86 4.86 0 00-.86 2.78v10.51a1 1 0 01-.28.74 1 1 0 01-.75.29 1 1 0 01-1-1V19.11a1.001 1.001 0 01.29-.76 1.08 1.08 0 01.75-.27 1 1 0 011 1v7.8a8.179 8.179 0 012.86-2.26 8.46 8.46 0 013.7-.81 9.57 9.57 0 014.49 1.06zm20.62.23a8.24 8.24 0 013.09 3.29 10.17 10.17 0 011.1 4.8 1 1 0 01-.27.71 1.05 1.05 0 01-.73.26H38.3a7.67 7.67 0 001.07 3.64A6.88 6.88 0 0042 40.3a7.48 7.48 0 003.63.89 8.389 8.389 0 002.71-.46 5.77 5.77 0 002.15-1.23 1.16 1.16 0 01.73-.27 1 1 0 01.62.2.868.868 0 01.07 1.38A8.84 8.84 0 0149 42.47a9.791 9.791 0 01-3.4.66 9.48 9.48 0 01-4.85-1.23 8.74 8.74 0 01-3.33-3.41 10.089 10.089 0 01-1.21-5 10.87 10.87 0 011.12-5 8.44 8.44 0 013.14-3.42 8.77 8.77 0 014.61-1.22 8.5 8.5 0 014.48 1.25zm-9 2.53a7.63 7.63 0 00-2.19 4.73h13.38a7.22 7.22 0 00-2.07-4.73 6.75 6.75 0 00-9.16 0h.04zm23.81 14.74a8.549 8.549 0 01-3.24-1.9 1.468 1.468 0 01-.45-1.07 1.619 1.619 0 01.69-1.35 2.11 2.11 0 011.21-.48 1.85 1.85 0 011.31.62c.56.57 1.245 1 2 1.26a7.22 7.22 0 002.79.54 5.94 5.94 0 003.06-.66 2 2 0 001.08-1.76 2.09 2.09 0 00-1.07-1.78 10.69 10.69 0 00-3.65-1.19c-4.42-.847-6.627-2.663-6.62-5.45a4.25 4.25 0 011-2.86 6.05 6.05 0 012.62-1.76 10.082 10.082 0 013.45-.59 10.47 10.47 0 014 .73 6.87 6.87 0 012.81 2c.274.302.434.692.45 1.1a1.39 1.39 0 01-.59 1.07 1.54 1.54 0 01-1 .28 2.38 2.38 0 01-1.63-.66 5.111 5.111 0 00-1.82-1.12 7.361 7.361 0 00-2.29-.34 5.56 5.56 0 00-2.61.54 1.66 1.66 0 00-1 1.5c-.015.413.105.82.34 1.16.357.393.808.689 1.31.86.91.335 1.847.593 2.8.77A12.09 12.09 0 0174.64 34a4.4 4.4 0 011.57 3.48 5.1 5.1 0 01-.86 2.88 5.74 5.74 0 01-2.54 2 10 10 0 01-4 .74 13.39 13.39 0 01-4.44-.73zm31.92-8.06a1.57 1.57 0 01-1.14.43H82a6.06 6.06 0 002.19 3.9 6.75 6.75 0 004.43 1.48 6.56 6.56 0 002.16-.38 6.398 6.398 0 001.85-.93 1.79 1.79 0 011.13-.38c.365-.01.72.115 1 .35a1.518 1.518 0 01.62 1.17 1.249 1.249 0 01-.55 1A9.79 9.79 0 0192 42.51a10.6 10.6 0 01-8.4-.64 8.941 8.941 0 01-3.5-3.4 9.681 9.681 0 01-1.26-4.94 10.242 10.242 0 011.19-5 8.55 8.55 0 013.31-3.41 9.44 9.44 0 014.82-1.23 8.55 8.55 0 014.58 1.18 7.72 7.72 0 013 3.27 10.849 10.849 0 011 4.83 1.45 1.45 0 01-.45 1.14zm-12.23-6a6.2 6.2 0 00-2 3.69h11.49a6.09 6.09 0 00-1.72-3.69 5.08 5.08 0 00-3.69-1.38 6 6 0 00-4.08 1.36v.02zm29.84-3.11a9.277 9.277 0 013.42 3.45 9.624 9.624 0 011.26 4.88v7.7a1.705 1.705 0 01-.496 1.267 1.715 1.715 0 01-1.264.503 1.713 1.713 0 01-1.64-1.078 1.708 1.708 0 01-.12-.682V40a8.478 8.478 0 01-2.94 2.31 8.77 8.77 0 01-8.22-.41 8.701 8.701 0 01-3.18-3.43 10.32 10.32 0 01-1.15-4.89 9.7 9.7 0 011.24-4.88 9.09 9.09 0 013.43-3.45 9.56 9.56 0 014.85-1.26 9.36 9.36 0 014.81 1.21zm-1.69 13.94a5.935 5.935 0 002.19-2.31c.54-1.015.815-2.15.8-3.3a6.925 6.925 0 00-.8-3.31 6.004 6.004 0 00-2.19-2.33 6.211 6.211 0 00-6.24 0 5.996 5.996 0 00-2.21 2.33 6.822 6.822 0 00-.81 3.31 6.724 6.724 0 00.81 3.3 6.098 6.098 0 008.45 2.31zm21.92-14.71a1.58 1.58 0 011 1.38c.014.113.014.227 0 .34a1.332 1.332 0 01-1.38 1.1 3.283 3.283 0 01-.52-.06 13.915 13.915 0 00-2.24-.25 6.48 6.48 0 00-4 1.14 3.634 3.634 0 00-1.52 3.07v10.08c.026.466-.128.924-.43 1.28a1.758 1.758 0 01-1.3.44 1.542 1.542 0 01-1.668-1.023 1.542 1.542 0 01-.072-.697V25.81a1.711 1.711 0 01.45-1.28 1.698 1.698 0 011.27-.45 1.532 1.532 0 011.73 1.73v.65a7.354 7.354 0 012.55-1.9 7.724 7.724 0 013.24-.69 6.14 6.14 0 012.89.56zm6.07 17.42a8.89 8.89 0 01-3.4-3.43 9.908 9.908 0 01-1.22-4.89c-.04-1.741.37-3.463 1.19-5a8.469 8.469 0 013.33-3.41 9.479 9.479 0 014.83-1.23 8.57 8.57 0 016.76 3.11c.226.244.348.567.34.9a1.508 1.508 0 01-.75 1.27 1.37 1.37 0 01-.8.24 1.687 1.687 0 01-1.34-.62 5.658 5.658 0 00-1.88-1.36 5.9 5.9 0 00-2.33-.43 5.659 5.659 0 00-4.32 1.77 6.656 6.656 0 00-1.61 4.76 7.041 7.041 0 00.77 3.33 5.75 5.75 0 002.18 2.3 6.14 6.14 0 003.19.83 5.79 5.79 0 003.8-1.21c.36-.293.806-.461 1.27-.48.326 0 .643.11.9.31a1.572 1.572 0 01.65 1.24 1.268 1.268 0 01-.41.93 8.78 8.78 0 01-6.21 2.31 9.67 9.67 0 01-4.94-1.24zm28.94-16.91a7.387 7.387 0 013 3 10.006 10.006 0 011.07 4.78v8.49a1.716 1.716 0 01-.499 1.291 1.717 1.717 0 01-1.291.499 1.713 1.713 0 01-1.64-1.078 1.708 1.708 0 01-.12-.682v-8.5a5.087 5.087 0 00-3.274-5.357 5.09 5.09 0 00-2.216-.303 5.995 5.995 0 00-2.64.59 4.68 4.68 0 00-1.86 1.59 3.886 3.886 0 00-.67 2.24v9.73c.009.468-.168.92-.49 1.26a1.702 1.702 0 01-1.27.5 1.713 1.713 0 01-1.64-1.078 1.708 1.708 0 01-.12-.682v-21.4a1.669 1.669 0 01.5-1.27 1.736 1.736 0 011.26-.48 1.706 1.706 0 011.27.48 1.731 1.731 0 01.49 1.27v6.39a7.526 7.526 0 012.62-1.71 9.25 9.25 0 017.52.43z" />
           </svg>
-        </a> </div>
+        </a>
 
-      <nav id="site-navigation"
-        class="main-navigation"
-        role="navigation">
-        <button class="menu-toggle">
+        <button class="menu-toggle site-navigation-button">
           <div class="burger">
             <div class="icon-bar1"></div>
             <div class="icon-bar2"></div>
             <div class="icon-bar3"></div>
           </div>
         </button>
-        <div class="menu-main-menu-container">
-          <ul id="menu-main-menu"
-            class="menu">
-            <li class="menu-item menu-item-has-children"><a href="">Services</a>
-              <ul class="sub-menu">
-                <li class="menu-item"><a href="/seo.html">Search Engine Optimization</a></li>
-                <li class="menu-item"><a href="/smo.html">Social Media Optimisation</a></li>
-                <li class="menu-item"><a href="/ppc.html">Pay Per Click</a></li>
-              </ul>
-            </li>
-            <li class="menu-item"><a href="/about.html">About Us</a></li>
-            <li class="menu-item"><a href="/contact.html">Contact </a></li>
-            <li class="menu-item"><a href="https://calendly.com/theseoarch/30min"
-                target="_blank">Schedule Demo</a></li>
-          </ul>
-        </div>
-      </nav>
+      </div>
     </header>
+
+    <nav id="site-navigation"
+      class="main-navigation"
+      role="navigation">
+      <div class="menu-main-menu-container">
+        <ul id="menu-main-menu"
+          class="menu">
+          <li class="menu-item"><a href="/seo.html">Search Engine Optimization</a></li>
+          <li class="menu-item"><a href="/smo.html">Social Media Optimisation</a></li>
+          <li class="menu-item"><a href="/ppc.html">Pay Per Click</a></li>
+          <li class="menu-item"><a href="/about.html">About Us</a></li>
+          <li class="menu-item"><a href="/contact.html">Contact </a></li>
+        </ul>
+      </div>
+    </nav>
 
     <section class="home-hero">
       <div class="container">
@@ -265,32 +262,14 @@
       </div>
     </section>
 
-    <!-- <section class="home-hero">
-      <div class="container">
-        <div class="home-hero-container-version-2">
-          <div class="content-text">
-            <div class="service-about">
-<div class="service-intro">
-  <p>
-Wondering why your business isn’t showing up in the top search results on Google?
-A missing SEO strategy is the reason.</p>
-</div>
-<div class="service-content">
-  <p>With our skilled team of SEO experts, we can make your dream business pop right up on google search results, leading your audience straight to you. Invest in your business with a package that will fetch you exponential growth, relevant organic website traffic, and increased sales.</p>
-  <p>With our skilled team of SEO experts, we can make your dream business pop right up on google search results, leading your audience straight to you. Invest in your business with a package that will fetch you exponential growth, relevant organic website traffic, and increased sales.</p>
-</div>
-</div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <section class="service-what-wedo">
       <div class="service-intro">
         Core values <br> we always live by
       </div>
       <div class="service-point-lists">
-        <div class="service-point-list">
+        <div class="service-point-list"
+          data-aos="fade-up"
+          data-aos-delay="0">
           <div class="service-icon">
             <img src="https://via.placeholder.com/48"
               alt="">
@@ -299,7 +278,9 @@ A missing SEO strategy is the reason.</p>
           <div class="service-content">Improve the keyword ranking of your website to ensure that your brand is seen by
             the maximum number of users.</div>
         </div>
-        <div class="service-point-list">
+        <div class="service-point-list"
+          data-aos="fade-up"
+          data-aos-delay="100">
           <div class="service-icon">
             <img src="https://via.placeholder.com/48"
               alt="">
@@ -308,7 +289,9 @@ A missing SEO strategy is the reason.</p>
           <div class="service-content">Ensure your metadata is optimized in order to encourage users to click through to
             your website from the results pages.</div>
         </div>
-        <div class="service-point-list">
+        <div class="service-point-list"
+          data-aos="fade-up"
+          data-aos-delay="200">
           <div class="service-icon">
             <img src="https://via.placeholder.com/48"
               alt="">
@@ -486,6 +469,8 @@ A missing SEO strategy is the reason.</p>
       src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript"
       src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script type="text/javascript"
+        src="/node_modules/aos/dist/aos.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
