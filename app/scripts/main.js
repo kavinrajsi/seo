@@ -1,7 +1,9 @@
 console.log('\'Allo \'Allo!');
-	// menu sticky on scroll - Scrolling Effect
-  AOS.init();
-
+// all page animation
+AOS.init({
+  once: true,
+  mirror: false
+});
   // service worker
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
@@ -37,9 +39,9 @@ if ('serviceWorker' in navigator) {
 			self.removeClass("open");
 			siteMenu.removeClass("open show");
       body.removeClass("no-scroll");
-			// setTimeout(function () {
-			// 	siteMenu.removeClass("show");
-			// }, 200);
+			setTimeout(function () {
+				siteMenu.removeClass("show");
+			}, 200);
 		}
 	});
 
