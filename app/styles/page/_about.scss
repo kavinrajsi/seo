@@ -1,8 +1,7 @@
-
-.home-hero-version-2{
-.f40{
-  font-size: 60px;
-}
+.home-hero-version-2 {
+  .f40 {
+    font-size: 60px;
+  }
 }
 
 .about-us-content {
@@ -11,16 +10,19 @@
   grid-template-columns: 1fr 1fr;
   @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
   @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
-  .col-list-about{
+
+  .col-list-about {
     background: #f0ffff;
     border-radius: 6px;
     padding: 30px 50px;
-    h2{
+
+    h2 {
       font-size: 32px;
       font-weight: 500;
       margin-bottom: 8px;
     }
-    p{
+
+    p {
       font-size: 16px;
       line-height: 24px;
     }
