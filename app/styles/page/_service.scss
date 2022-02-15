@@ -54,9 +54,9 @@
 
   .service-point-lists {
     .service-point-list {
-      padding-bottom: 20px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--border-color);
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid var(--border-color);
 
       &:last-child {
         border-bottom: 0;
@@ -64,6 +64,7 @@
 
       .service-icon {
         margin-bottom: 16px;
+        display: none;
 
         img {
           border-radius: 4px;
@@ -114,9 +115,4 @@
       font-size: 16px;
     }
   }
-}
-
-
-.text-left {
-  text-align: left !important;
 }
