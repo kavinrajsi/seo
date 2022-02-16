@@ -45,7 +45,7 @@
   @include interpolate('padding-left', 375px, 15px, 1024px, 180px, 'ease-in');
   @include interpolate('padding-right', 375px, 15px, 1024px, 180px, 'ease-in');
 
-  @media(min-width: $tablet) {
+  @media(min-width: $ptablet) {
     gap: 30px 80px;
     grid-template-columns: 1fr 1fr;
   }
