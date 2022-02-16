@@ -1,5 +1,3 @@
-console.log("'Allo 'Allo!");
-
 // all page animation
 AOS.init({
   once: true,
@@ -7,16 +5,16 @@ AOS.init({
 });
 
 // service worker
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("./sw.js")
-    .then((serviceWorker) => {
-      console.log("Service Worker registered: ", serviceWorker);
-    })
-    .catch((error) => {
-      console.error("Error registering the Service Worker: ", error);
-    });
-}
+// if ("serviceWorker" in navigator) {
+//   navigator.serviceWorker
+//     .register("./sw.js")
+//     .then((serviceWorker) => {
+//       console.log("Service Worker registered: ", serviceWorker);
+//     })
+//     .catch((error) => {
+//       console.error("Error registering the Service Worker: ", error);
+//     });
+// }
 
 $(window).on("scroll", function () {
   if ($(window).scrollTop()) {
@@ -44,20 +42,4 @@ $(".burger").click(function () {
       siteMenu.removeClass("show");
     }, 200);
   }
-});
-
-// modal close
-$(".modal-content .close").click(function (e) {
-  e.preventDefault();
-  var self = $(this);
-  var body = $("body");
-  var siteMenu = $(".modal-content");
-  var siteMenuLink = $(".menu-main-menu-container ul li:last-child a");
-
-  siteMenuLink.removeClass("open");
-  siteMenu.removeClass("open");
-  setTimeout(function () {
-    siteMenu.removeClass("show");
-    body.removeClass("no-scroll");
-  }, 200);
 });
