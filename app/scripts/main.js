@@ -45,45 +45,6 @@ if ('serviceWorker' in navigator) {
 		}
 	});
 
-	// submenu open
-	$(".menu-item-has-children > a").click(function (e) {
-		e.preventDefault();
-		$(".menu-item-has-children").toggleClass("active");
-		$(".menu-item-has-children .sub-menu").toggleClass("open");
-	});
-
-	$(document).click(function (e) {
-		$(".menu-item-has-children").each(function () {
-			var container = $(".menu-item-has-children");
-			if (!container.is(e.target) && container.has(e.target).length === 0) {
-				$(this).removeClass("active");
-				$(".menu-item-has-children .sub-menu").removeClass("open");
-			}
-		});
-	});
-
-	// modal open
-	$(".menu-main-menu-container ul:not(.sub-menu) > li:last-child a").click(
-		function (e) {
-			e.preventDefault();
-			var self = $(this);
-			var body = $("body");
-			var siteMenu = $(".modal-content");
-
-			if (!self.hasClass("open")) {
-				self.addClass("open");
-				siteMenu.addClass("open show");
-				body.addClass("no-scroll");
-			} else {
-				self.removeClass("open");
-				siteMenu.removeClass("open");
-				setTimeout(function () {
-					siteMenu.removeClass("show");
-					body.removeClass("no-scroll");
-				}, 200);
-			}
-		}
-	);
 
 	// modal close
 	$(".modal-content .close").click(function (e) {
