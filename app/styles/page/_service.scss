@@ -91,16 +91,14 @@
 }
 
 .service-whatwe-list {
-  @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
+  @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
+  // @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
 
   .service-lists {
     display: flex;
     flex-wrap: wrap;
 
     .service-list {
-      &:first-child {
-        display: none;
-      }
       border-radius: 4px;
       flex: 0 0 calc(50% - 0px);
       max-width: calc(50% - 0px);
@@ -113,10 +111,6 @@
       }
 
       @media(min-width: $tablet) {
-        &:first-child {
-          display: block;
-        }
-
         flex: 0 0 20%;
         max-width: 20%;
         padding: 16px;
