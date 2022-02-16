@@ -185,6 +185,17 @@
   }
 }
 
+/*  */
+/*  */
+.page__content--contact__content {
+  @include interpolate("padding-top", 576px, 72px, 992px, 80px, "ease-in");
+  @include interpolate("padding-bottom", 576px, 64px, 992px, 80px, "ease-in");
+
+}
+/*  */
+/*  */
+
+
 
 .form {
   max-width: 542px;

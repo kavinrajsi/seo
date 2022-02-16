@@ -39,12 +39,16 @@
   width: 100%;
   display: grid;
   justify-content: space-between;
-  gap: 30px 80px;
-  grid-template-columns: 1fr 1fr;
-  @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
-  @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
-  @include interpolate('padding-left', 375px, 60px, 1024px, 180px, 'ease-in');
-  @include interpolate('padding-right', 375px, 60px, 1024px, 180px, 'ease-in');
+  // padding: 4vw;
+  @include interpolate('padding-top', 375px, 40px, 1024px, 120px, 'ease-in');
+  @include interpolate('padding-bottom', 375px, 40px, 1024px, 120px, 'ease-in');
+  @include interpolate('padding-left', 375px, 15px, 1024px, 180px, 'ease-in');
+  @include interpolate('padding-right', 375px, 15px, 1024px, 180px, 'ease-in');
+
+  @media(min-width: $tablet) {
+    gap: 30px 80px;
+    grid-template-columns: 1fr 1fr;
+  }
 
   .service-intro {
     line-height: 1.4;
@@ -94,15 +98,33 @@
     flex-wrap: wrap;
 
     .service-list {
-      &:not(:first-child){
-        // background: #efefef;
+      &:first-child {
+        display: none;
       }
       border-radius: 4px;
-      flex: 0 0 22%;
-      max-width: 22%;
-      padding: 16px;
-      margin: 15px;
+      flex: 0 0 calc(50% - 0px);
+      max-width: calc(50% - 0px);
       margin-bottom: 15px;
+      padding: 8px;
+
+      @media(min-width: $mobile) {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+      }
+
+      @media(min-width: $tablet) {
+        &:first-child {
+          display: block;
+        }
+
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding: 16px;
+      }
+      @media(min-width: $ptablet) {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
     }
 
     .service-icon {
@@ -112,7 +134,8 @@
 
     .service-title {
       padding-top: 8px;
-      font-size: 16px;
+      // font-size: 16px;
+      @include interpolate("font-size", 576px, 14px, 992px, 16px, "ease-in");
     }
   }
 }
