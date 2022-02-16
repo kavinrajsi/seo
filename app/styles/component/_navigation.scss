@@ -128,12 +128,15 @@
   }
 
   .menu {
-    padding-top: 60px;
+    // padding-top: 60px;
+    @include interpolate("padding-top", 576px, 20px, 992px, 60px, "ease-in");
     .menu-item {
       a {
         color: var(--white);
-        font-size: 36px;
-        line-height: 80px;
+        // font-size: 36px;
+        // line-height: 80px;
+        @include interpolate("font-size", 576px, 19px, 992px, 36px, "ease-in");
+        @include interpolate("line-height", 576px, 46px, 992px, 80px, "ease-in");
       }
     }
   }
