@@ -4,6 +4,12 @@ AOS.init({
   mirror: false,
 });
 
+/* modal */
+$('.btn-close').click(function () {
+  $('#exampleModal').modal('hide');
+});
+/* modal */
+
 // service worker
 // if ("serviceWorker" in navigator) {
 //   navigator.serviceWorker

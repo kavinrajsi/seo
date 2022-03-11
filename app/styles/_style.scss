@@ -109,6 +109,10 @@ svg {
   font-size: 40px;
 }
 
+.f46{
+  @include interpolate('font-size', 375px, 24px, 1024px, 46px, 'ease-in');
+}
+
 .mb20 {
   margin-bottom: 20px;
 }
