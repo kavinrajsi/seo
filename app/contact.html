@@ -119,6 +119,19 @@
       })(window, document, 'script', 'dataLayer', 'GTM-5Q238HZ');
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async
+      src="https://www.googletagmanager.com/gtag/js?id=G-B9ET3QQ0BW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-B9ET3QQ0BW');
+    </script>
   </head>
 
   <body>
@@ -414,8 +427,8 @@
     <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/node_modules/aos/dist/aos.js"></script>
     <!-- endbuild -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

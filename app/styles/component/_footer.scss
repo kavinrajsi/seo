@@ -247,6 +247,7 @@ body.modal-open {
   @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
   @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
 }
+
 .u-layout-row {
   display: flex;
   flex: 1 1 100%;
@@ -255,21 +256,24 @@ body.modal-open {
   min-height: 100%;
   max-width: 100%;
 }
+
 .u-layout-row>.u-size-20 {
   flex: 0 0 100%;
   max-width: 100%;
   min-width: 100%;
 }
 
-@media(min-width: 768px){
+@media(min-width: 768px) {
   .u-layout-row {
     flex-direction: column;
   }
 }
+
 @media(min-width: 992px) {
   .u-layout-row {
     flex-direction: row;
   }
+
   .u-layout-row>.u-size-20 {
     flex: 0 0 33.33333333%;
     max-width: 33.33333333%;
@@ -361,23 +365,82 @@ p.u-text.u-text-13 {
   border-bottom: 1px solid var(--gray-web);
   padding-bottom: 10px;
   margin-bottom: 10px;
-  &:last-child{
+
+  &:last-child {
     border: 0;
   }
 }
 
-.price-note{
+.price-note {
   text-align: center;
   padding-top: 20px;
 }
 
-.pricing-title{
+.pricing-title {
   text-align: center;
   padding-bottom: 30px;
   font-weight: 500;
   color: var(--pure-black);
-  sup{
+
+  sup {
     font-weight: 400;
     color: var(--black);
+  }
+}
+
+.pricing-table-color {
+  background-color: var(--white) !important;
+}
+
+.pricing-table-color-white {
+  background-color: var(--pure-white) !important;
+}
+
+
+.service-list-icons {
+  display: grid;
+  gap: 30px;
+
+  @media(min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.service-list-icons svg {
+  width: 160px;
+}
+
+.service-list-icon {
+  text-align: center;
+}
+
+
+section.policy-page {
+  max-width: 700px;
+  margin: 0 auto;
+  @include interpolate('padding-top', 375px, 60px, 1024px, 120px, 'ease-in');
+  @include interpolate('padding-bottom', 375px, 60px, 1024px, 120px, 'ease-in');
+
+  h1,
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 28px;
+    // @include interpolate('font-size', 375px, 24px, 1024px, 28px, 'ease-in');
+  }
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 40px;
+
+    li {
+      margin-bottom: 6px;
+      list-style-type: disc;
+      display: list-item;
+      text-align: -webkit-match-parent;
+    }
   }
 }

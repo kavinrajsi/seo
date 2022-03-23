@@ -377,10 +377,11 @@
         width: 20px;
         height: 20px;
         vertical-align: middle;
-        border: 1px solid transparent;
+        border: 2px solid var(--main-color);
         border-radius: 2px;
         // background: #595d73;
-        background: var(--main-color);
+        // background: var(--main-color);
+        background: transparent;
         margin-right: 18px;
       }
     }
@@ -390,7 +391,8 @@
   &-radio-inline {
     .form-check-input {
       &:checked+label::before {
-        background-color: var(--main-color);
+        background-color: transparent;
+        border: 2px solid var(--main-color);
       }
 
       &:checked+label::after {
@@ -417,6 +419,8 @@
         border-radius: 50%;
         // background: #595d73;
         background: var(--main-color);
+        background-color: transparent;
+        border: 2px solid var(--main-color);
         margin-right: 18px;
       }
     }
