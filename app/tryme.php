@@ -25,6 +25,7 @@ foreach( $services as $servicesValue )
 
 
 $to = "theseoarch.com@gmail.com";
+
 $subject = "[theseoarch.com] form Enquire by ". $name."";
 
 $msg = "<html><body style='font-family:Lato,sans-serif;'>";
@@ -41,9 +42,10 @@ $msg .= "</table>";
 $msg .= "</body></html>";
 
 
-$header = "From:webmaster@theseoarch.com\r\n";
-$header .= "MIME-Version: 1.0\r\n";
-$header .= "Content-type: text/html\r\n";
+$header = "From: Website <webmaster@theseoarch.com>"."\r\n";
+$header .= "Cc: theseoarch@gmail.com" . "\r\n";
+$header .= "MIME-Version: 1.0" . "\r\n";
+$header .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 $retval = mail ($to,$subject,$msg,$header);
 

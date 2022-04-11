@@ -510,7 +510,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title"
-              id="exampleModalLabel">Modal title</h5>
+              id="exampleModalLabel">Fill in the below form, and get started</h5>
             <button type="button"
               class="btn-close"
               data-bs-dismiss="modal"
@@ -568,8 +568,12 @@
                 <label class="form-group-label"
                   for="projectDetails">Site URL</label>
               </div>
-
-
+<div class="form-group">
+  <div class="g-recaptcha"
+  required
+    id="recaptchaInput"
+    data-sitekey="6LdVpFcfAAAAAEzbnz9iTinJfHbfyCpPRwC6xfKi"></div>
+</div>
               <div class="form-group">
                 <button type="submit"
                   class="btn--cover"
@@ -665,6 +669,7 @@
     <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
@@ -694,6 +699,9 @@
             required: true,
             number: true,
           },
+          recaptchaInput: {
+            required: true,
+          }
         },
         submitHandler: function (form) {
           $.ajax({
@@ -702,6 +710,8 @@
             data: $(form).serialize(),
             success: function (data) {
               $(form).append("<div id='message'></div>");
+              $("form .form-group").addClass('hide');
+              $("form .modal-body").addClass('hide');
               $("#message").html(data);
               $("#form")[0].reset();
             },
